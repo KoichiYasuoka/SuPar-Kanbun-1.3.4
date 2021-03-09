@@ -113,16 +113,11 @@ v,動詞,描写,境遇,VERB,Degree=Pos
 v,動詞,描写,形質,VERB,Degree=Pos
 v,動詞,描写,態度,VERB,Degree=Pos
 v,動詞,描写,量,VERB,Degree=Pos
-v,動詞,行為,交流,ADP,_
-v,動詞,行為,交流,PROPN,_
 v,動詞,行為,交流,VERB,_
-v,動詞,行為,伝達,NUM,_
 v,動詞,行為,伝達,VERB,_
 v,動詞,行為,使役,VERB,_
 v,動詞,行為,儀礼,VERB,_
 v,動詞,行為,分類,VERB,Degree=Equ
-v,動詞,行為,動作,ADV,_
-v,動詞,行為,動作,NUM,_
 v,動詞,行為,動作,VERB,_
 v,動詞,行為,姿勢,VERB,_
 v,動詞,行為,役割,VERB,_
