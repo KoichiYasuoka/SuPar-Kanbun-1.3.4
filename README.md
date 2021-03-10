@@ -35,7 +35,7 @@ Tokenizer, POS-Tagger and Dependency-Parser for Classical Chinese Texts (漢文/
 子 NOUN ═╝<╝     obj
 ```
 
-`suparkanbun.load()` has two options `suparkanbun.load(BERT="guwenbert-base",Danku=False)`. With the option `Danku=True` the pipeline tries to segment sentences automatically.
+`suparkanbun.load()` has two options `suparkanbun.load(BERT="guwenbert-base",Danku=False)`. With the option `BERT="guwenbert-large"` the pipeline utilizes [GuwenBERT-large](https://huggingface.co/ethanyt/guwenbert-large). With the option `Danku=True` the pipeline tries to segment sentences automatically.
 
 ## Installation for Linux
 
