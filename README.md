@@ -40,8 +40,7 @@ Tokenizer, POS-Tagger and Dependency-Parser for Classical Chinese Texts (漢文/
 ## Installation for Linux
 
 ```sh
-pip3 install git+https://github.com/KoichiYasuoka/SuPar --user
-pip3 install suparkanbun --user
+pip3 install suparkanbun supar==1.0.1a1 --user
 ```
 
 ## Installation for Cygwin64
@@ -55,8 +54,7 @@ pip3.7 install suparkanbun --no-build-isolation
 ## Installation for Jupyter Notebook (Google Colaboratory)
 
 ```py
-!pip install git+https://github.com/KoichiYasuoka/SuPar
-!pip install suparkanbun
+!pip install suparkanbun supar==1.0.1a1
 ```
 
 Try [notebook](https://colab.research.google.com/github/KoichiYasuoka/SuPar-Kanbun/blob/main/suparkanbun.ipynb) for Google Colaboratory.
