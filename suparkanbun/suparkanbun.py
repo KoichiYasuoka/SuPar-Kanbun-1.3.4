@@ -4,7 +4,7 @@
 import os
 PACKAGE_DIR=os.path.abspath(os.path.dirname(__file__))
 DOWNLOAD_DIR=os.path.join(PACKAGE_DIR,"models")
-MODEL_URL="https://raw.githubusercontent.com/KoichiYasuoka/SuParKanbun/main/suparkanbun/models/"
+MODEL_URL="https://raw.githubusercontent.com/KoichiYasuoka/SuPar-Kanbun/main/suparkanbun/models/"
 
 import numpy
 from spacy.language import Language
@@ -133,7 +133,7 @@ class AutoModelTagger(object):
   def __init__(self,dir,label):
     from suparkanbun.download import checkdownload
     from transformers import AutoModelForTokenClassification,AutoTokenizer
-    checkdownload(MODEL_URL,dir)
+    checkdownload(MODEL_URL+os.path.basename(dir)+"/",dir)
     self.model=AutoModelForTokenClassification.from_pretrained(dir)
     self.tokenizer=AutoTokenizer.from_pretrained(dir)
     self.label=label
