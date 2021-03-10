@@ -40,7 +40,7 @@ Tokenizer, POS-Tagger and Dependency-Parser for Classical Chinese Texts (漢文/
 ## Installation for Linux
 
 ```sh
-pip3 install git+https://github.com/yzhangcs/parser --user
+pip3 install git+https://github.com/KoichiYasuoka/SuPar --user
 pip3 install suparkanbun --user
 ```
 
