@@ -2,7 +2,7 @@
 
 # SuPar-Kanbun
 
-Tokenizer, POS-Tagger and Dependency-Parser for Classical Chinese Texts (漢文/文言文) with [SuPar](https://github.com/yzhangcs/parser), [spaCy](https://spacy.io) and [Transformers](https://huggingface.co/transformers/).
+Tokenizer, POS-Tagger and Dependency-Parser for Classical Chinese Texts (漢文/文言文) with [spaCy](https://spacy.io), [Transformers](https://huggingface.co/transformers/) and [SuPar](https://github.com/yzhangcs/parser).
 
 ## Basic usage
 
