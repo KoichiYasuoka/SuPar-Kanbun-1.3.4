@@ -60,6 +60,7 @@ class SuParKanbunTokenizer(object):
       self.danku=None
   def __call__(self,text):
     from suparkanbun.simplify import simplify
+    from suparkanbun.tradify import tradify
     t=""
     for c in text:
       if c in simplify:
@@ -81,7 +82,9 @@ class SuParKanbunTokenizer(object):
     for s in u.sentences:
       v=[]
       for h,d in zip(s.values[6],s.values[7]):
-        v.append({"form":t[i],"lemma":p[i][0],"pos":p[i][1],"head":h,"deprel":d})
+        j=t[i]
+        k=tradify[j] if j in tradify else j
+        v.append({"form":j,"lemma":k,"pos":p[i][1],"head":h,"deprel":d})
         i+=1
       for j in reversed(range(0,len(v)-1)):
         if v[j]["deprel"]=="compound" and v[j]["head"]==j+2 and v[j]["pos"]==v[j+1]["pos"]:
