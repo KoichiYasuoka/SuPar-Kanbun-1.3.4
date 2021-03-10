@@ -52,3 +52,12 @@ curl -L https://raw.githubusercontent.com/KoichiYasuoka/CygTorch/master/installe
 pip3.7 install suparkanbun --no-build-isolation
 ```
 
+## Installation for Jupyter Notebook (Google Colaboratory)
+
+```py
+!pip install git+https://github.com/KoichiYasuoka/SuPar
+!pip install suparkanbun
+```
+
+Try [notebook](https://colab.research.google.com/github/KoichiYasuoka/SuPar-Kanbun/blob/main/suparkanbun.ipynb) for Google Colaboratory.
+
