@@ -157,13 +157,6 @@ class AutoModelTagger(object):
     return [(t,self.label[p]) for t,p in zip(text,predict[0].tolist()[1:])]
 
 class MakeGloss(object):
-  extras={
-    "n,名詞,人,姓氏":"[surname]",
-    "n,名詞,人,名":"[given-name]",
-    "n,名詞,主体,書物":"[book-name]",
-    "n,名詞,主体,国名":"[country-name]",
-    "n,名詞,固定物,地名":"[place-name]"
-  }
   def __init__(self,file=None):
     if file==None:
       file=os.path.join(DOWNLOAD_DIR,"gloss.orig.txt")
@@ -176,11 +169,18 @@ class MakeGloss(object):
         self.gloss[(t[0],t[2])]=t[3]
       elif len(t)==5:
         self.gloss[(t[0],t[3])]=t[4]
+    self.extra={
+      "n,名詞,人,姓氏":"[surname]",
+      "n,名詞,人,名":"[given-name]",
+      "n,名詞,主体,書物":"[book-name]",
+      "n,名詞,主体,国名":"[country-name]",
+      "n,名詞,固定物,地名":"[place-name]"
+    }
   def __call__(self,form,xpos):
     if (form,xpos) in self.gloss:
       return self.gloss[(form,xpos)]
-    if xpos in extras:
-      return extras[xpos]
+    if xpos in self.extra:
+      return self.extra[xpos]
     if xpos=="n,名詞,時,*":
       if len(form)>1:
         return "[era-name]"
