@@ -5,7 +5,7 @@ URL="https://github.com/KoichiYasuoka/SuPar-Kanbun"
 
 setuptools.setup(
   name="suparkanbun",
-  version="0.8.2",
+  version="0.9.0",
   description="Tokenizer POS-tagger and Dependency-parser for Classical Chinese",
   long_description=long_description,
   long_description_content_type="text/markdown",
