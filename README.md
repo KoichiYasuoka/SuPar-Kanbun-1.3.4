@@ -59,3 +59,7 @@ pip3.7 install suparkanbun --no-build-isolation
 
 Try [notebook](https://colab.research.google.com/github/KoichiYasuoka/SuPar-Kanbun/blob/main/suparkanbun.ipynb) for Google Colaboratory.
 
+## Author
+
+Koichi Yasuoka (安岡孝一)
+
