@@ -8,7 +8,7 @@ MODEL_URL="https://raw.githubusercontent.com/KoichiYasuoka/SuPar-Kanbun/main/sup
 
 import numpy
 from spacy.language import Language
-from spacy.symbols import LANG,LEMMA,POS,TAG,DEP,HEAD
+from spacy.symbols import LANG,NORM,LEMMA,POS,TAG,DEP,HEAD
 from spacy.tokens import Doc,Span,Token
 from spacy.util import get_lang_class
 
@@ -58,6 +58,7 @@ class SuParKanbunTokenizer(object):
       self.danku=AutoModelTagger(d,["B","E","E2","E3","M","S"])
     else:
       self.danku=None
+    self.gloss=MakeGloss()
   def __call__(self,text):
     from suparkanbun.simplify import simplify
     from suparkanbun.tradify import tradify
@@ -105,13 +106,16 @@ class SuParKanbunTokenizer(object):
     heads=[]
     deps=[]
     spaces=[]
+    norms=[]
     for s in w:
       for i,t in enumerate(s):
-        words.append(t["form"])
+        form=t["form"]
+        words.append(form)
         lemmas.append(vs.add(t["lemma"]))
         p=t["pos"].split(",")
+        xpos=",".join(p[0:4])
         pos.append(vs.add(p[4]))
-        tags.append(vs.add(",".join(p[0:4])))
+        tags.append(vs.add(xpos))
         feats.append(p[5])
         if t["deprel"]=="root":
           heads.append(0)
@@ -120,9 +124,14 @@ class SuParKanbunTokenizer(object):
           heads.append(t["head"]-i-1)
           deps.append(vs.add(t["deprel"]))
         spaces.append(False)
+        g=self.gloss(form,xpos)
+        if g!=None:
+          norms.append(vs.add(g))
+        else:
+          norms.append(vs.add(form))
     doc=Doc(self.vocab,words=words,spaces=spaces)
-    a=numpy.array(list(zip(lemmas,pos,tags,deps,heads)),dtype="uint64")
-    doc.from_array([LEMMA,POS,TAG,DEP,HEAD],a)
+    a=numpy.array(list(zip(lemmas,pos,tags,deps,heads,norms)),dtype="uint64")
+    doc.from_array([LEMMA,POS,TAG,DEP,HEAD,NORM],a)
     try:
       doc.is_tagged=True
       doc.is_parsed=True
@@ -146,6 +155,36 @@ class AutoModelTagger(object):
     output=self.model(input)
     predict=torch.argmax(output[0],dim=2)
     return [(t,self.label[p]) for t,p in zip(text,predict[0].tolist()[1:])]
+
+class MakeGloss(object):
+  extras={
+    "n,名詞,人,姓氏":"[surname]",
+    "n,名詞,人,名":"[given-name]",
+    "n,名詞,主体,書物":"[book-name]",
+    "n,名詞,主体,国名":"[country-name]",
+    "n,名詞,固定物,地名":"[place-name]"
+  }
+  def __init__(self,file=None):
+    if file==None:
+      file=os.path.join(DOWNLOAD_DIR,"gloss.orig.txt")
+    with open(file,"r",encoding="utf-8") as f:
+      r=f.read()
+    self.gloss={}
+    for s in r.split("\n"):
+      t=s.split()
+      if len(t)==4:
+        self.gloss[(t[0],t[2])]=t[3]
+      elif len(t)==5:
+        self.gloss[(t[0],t[3])]=t[4]
+  def __call__(self,form,xpos):
+    if (form,xpos) in self.gloss:
+      return self.gloss[(form,xpos)]
+    if xpos in extras:
+      return extras[xpos]
+    if xpos=="n,名詞,時,*":
+      if len(form)>1:
+        return "[era-name]"
+    return None
 
 def load(BERT="guwenbert-base",Danku=False):
   return SuParKanbunLanguage(BERT,Danku)
