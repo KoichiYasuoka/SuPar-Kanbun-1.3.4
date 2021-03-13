@@ -2880,6 +2880,7 @@
 淹 淹 v,動詞,行為,動作 submerge
 浅 淺 浅 v,動詞,描写,量 shallow
 淺 淺 浅 v,動詞,描写,量 shallow
+淸 清 v,動詞,描写,形質 clear
 清 清 v,動詞,描写,形質 clear
 减 減 减 v,動詞,行為,動作 reduce
 減 減 减 v,動詞,行為,動作 reduce
@@ -3275,6 +3276,7 @@
 畏 畏 v,動詞,行為,態度 fear
 畔 畔 v,動詞,行為,交流 rebel
 留 留 v,動詞,行為,移動 remain
+畱 留 v,動詞,行為,移動 remain
 畜 畜 n,名詞,主体,動物 domestic-animals
 畜 畜 v,動詞,行為,交流 raise-domestic-animals
 亩 畝 亩 n,名詞,人,名 [given-name]
@@ -3677,7 +3679,6 @@
 素 素 n,名詞,描写,形質 white
 素 素 v,動詞,描写,形質 plain
 索 索 v,動詞,行為,動作 twist-a-rope
-素 索 v,動詞,行為,態度 seek
 索 索 v,動詞,行為,態度 seek
 紫 紫 n,名詞,描写,形質 purple
 䌷 紬 䌷 n,名詞,可搬,道具 silk-fabric
@@ -4292,6 +4293,7 @@
 药 藥 药 n,名詞,可搬,道具 medicine
 薬 藥 药 n,名詞,可搬,道具 medicine
 藥 藥 药 n,名詞,可搬,道具 medicine
+藩 藩 n,名詞,制度,場 foreign-country
 藻 藻 n,名詞,固定物,樹木 seawead
 藻 藻 v,動詞,行為,動作 ornate
 芦 蘆 芦 n,名詞,固定物,樹木 reed
@@ -5504,10 +5506,14 @@
 顶 頂 顶 n,名詞,不可譲,身体 crown-of-the-head
 順 順 顺 v,動詞,行為,交流 follow
 顺 順 顺 v,動詞,行為,交流 follow
+須 須 须 n,名詞,不可譲,身体 beard
+须 須 须 n,名詞,不可譲,身体 beard
 須 須 须 n,名詞,人,名 [given-name]
 须 須 须 n,名詞,人,名 [given-name]
 須 須 须 v,助動詞,必要,* need
 须 須 须 v,助動詞,必要,* need
+須 須 须 v,動詞,行為,動作 wait-for
+须 須 须 v,動詞,行為,動作 wait-for
 須臾 須臾 须臾 n,名詞,時,* short-time
 须臾 須臾 须臾 n,名詞,時,* short-time
 頌 頌 颂 n,名詞,制度,儀礼 [ancient-music]
