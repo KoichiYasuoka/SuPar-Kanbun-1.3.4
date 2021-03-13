@@ -4334,6 +4334,7 @@
 蚤 蚤 n,名詞,時,* early
 蚩尤 蚩尤 n,名詞,人,名 [given-name]
 蛇 蛇 n,名詞,主体,動物 snake
+蛙 蛙 n,名詞,主体,動物 frog
 蛟 蛟 n,名詞,主体,動物 dragon
 蜡 蜡 n,名詞,制度,儀礼 year-end-festival
 蝶 蝶 n,名詞,主体,動物 butterfly
@@ -5882,7 +5883,7 @@
 鼋 黿 鼋 n,名詞,主体,動物 soft-shelled-turtle
 鼂 鼂 鼌 n,名詞,主体,動物 marine-turtle
 鼌 鼂 鼌 n,名詞,主体,動物 marine-turtle
-鼃 鼃 蛙 n,名詞,主体,動物 water-flog
+鼃 鼃 蛙 n,名詞,主体,動物 water-frog
 鼉 鼉 鼍 n,名詞,主体,動物 alligator
 鼍 鼉 鼍 n,名詞,主体,動物 alligator
 鼎 鼎 n,名詞,可搬,道具 three-footed-cauldron
