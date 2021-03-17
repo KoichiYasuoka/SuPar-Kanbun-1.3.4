@@ -5440,6 +5440,7 @@
 云汉 雲漢 云汉 n,名詞,主体,書物 [book-name]
 雲漢 雲漢 云汉 n,名詞,主体,書物 [book-name]
 雷 雷 n,名詞,天象,気象 thunder
+靁 雷 n,名詞,天象,気象 thunder
 电 電 电 n,名詞,天象,気象 lightning
 電 電 电 n,名詞,天象,気象 lightning
 霄 霄 n,名詞,人,名 [given-name]
