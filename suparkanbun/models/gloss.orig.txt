@@ -1299,6 +1299,7 @@
 孔 孔 v,動詞,描写,量 great
 孔子 孔子 n,名詞,人,複合的人名 Confucius
 字 字 n,名詞,不可譲,属性 polite-name
+字 字 v,動詞,行為,交流 foster
 存 存 v,動詞,存在,存在 exist
 孚 孚 n,名詞,描写,形質 confidence
 孚 孚 v,動詞,変化,生物 hatch
@@ -1309,6 +1310,7 @@
 孝文 孝文 n,名詞,人,その他の人名 Xiaowen
 孟 孟 n,名詞,人,名 [given-name]
 孟 孟 n,名詞,人,姓氏 [surname]
+孟 孟 n,名詞,時,* first-month
 孟子 孟子 n,名詞,人,複合的人名 Mencius
 孟敬子 孟敬子 n,名詞,人,複合的人名 Mengjingzi
 季 季 n,名詞,人,姓氏 [surname]
@@ -2057,6 +2059,7 @@
 所 所 n,名詞,制度,場 place
 所 所 p,助詞,接続,体言化 that-which
 扃 扃 n,名詞,可搬,道具 bar-of-a-gate
+扈 扈 v,動詞,行為,動作 groom
 扉 扉 n,名詞,固定物,建造物 leaf-of-a-door
 手 手 n,名詞,不可譲,身体 hand
 才 才 n,名詞,可搬,成果物 talent
@@ -2126,6 +2129,7 @@
 掩 掩 v,動詞,行為,動作 cover
 措 措 v,動詞,行為,設置 establish
 揆 揆 n,名詞,制度,儀礼 standard
+揆 揆 v,動詞,行為,動作 measure
 揉 揉 v,動詞,行為,動作 soften
 提 提 v,動詞,行為,動作 lift
 挿 插 n,名詞,可搬,道具 spade
@@ -3666,6 +3670,8 @@
 约 約 约 v,動詞,行為,動作 bind
 紅 紅 红 n,名詞,描写,形質 red
 红 紅 红 n,名詞,描写,形質 red
+紉 紉 纫 v,動詞,行為,動作 twist-into-cord
+纫 紉 纫 v,動詞,行為,動作 twist-into-cord
 納 納 纳 v,動詞,行為,動作 bring-in
 纳 納 纳 v,動詞,行為,動作 bring-in
 純 純 纯 v,動詞,描写,形質 pure
@@ -4407,6 +4413,7 @@
 被 被 v,動詞,行為,動作 cover
 裁 裁 v,動詞,行為,動作 tailor
 裎 裎 v,動詞,行為,動作 naked
+裔 裔 n,名詞,人,関係 posterity
 裕 裕 v,動詞,描写,形質 abundant
 裘 裘 n,名詞,人,名 [given-name]
 裘 裘 n,名詞,可搬,道具 fur
