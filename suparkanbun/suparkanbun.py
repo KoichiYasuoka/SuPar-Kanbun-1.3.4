@@ -47,6 +47,10 @@ class SuParKanbunTokenizer(object):
     from supar import Parser
     self.bert=bert
     self.vocab=vocab
+    self.simplify={}
+    if bert.startswith("guwenbert"):
+      from suparkanbun.simplify import simplify
+      self.simplify=simplify
     with open(os.path.join(DOWNLOAD_DIR,"labelPOS.txt"),"r",encoding="utf-8") as f:
       r=f.read()
     d=os.path.join(DOWNLOAD_DIR,bert+".pos")
@@ -60,12 +64,11 @@ class SuParKanbunTokenizer(object):
       self.danku=None
     self.gloss=MakeGloss()
   def __call__(self,text):
-    from suparkanbun.simplify import simplify
     from suparkanbun.tradify import tradify
     t=""
     for c in text:
-      if c in simplify:
-        t+=simplify[c]
+      if c in self.simplify:
+        t+=self.simplify[c]
       else:
         t+=c
     if self.danku!=None:
