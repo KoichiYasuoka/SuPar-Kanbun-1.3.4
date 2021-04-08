@@ -189,7 +189,7 @@ class MakeGloss(object):
         return "[era-name]"
     return None
 
-def load(BERT="guwenbert-base",Danku=False):
+def load(BERT="roberta-classical-chinese-base-char",Danku=False):
   return SuParKanbunLanguage(BERT,Danku)
 
 def to_conllu(item,offset=1):
