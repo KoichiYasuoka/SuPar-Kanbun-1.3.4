@@ -35,7 +35,12 @@ Tokenizer, POS-Tagger and Dependency-Parser for Classical Chinese Texts (漢文/
 子 NOUN ═╝<╝     obj
 ```
 
-`suparkanbun.load()` has two options `suparkanbun.load(BERT="guwenbert-base",Danku=False)`. With the option `BERT="guwenbert-large"` the pipeline utilizes [GuwenBERT-large](https://huggingface.co/ethanyt/guwenbert-large). With the option `Danku=True` the pipeline tries to segment sentences automatically.
+`suparkanbun.load()` has two options `suparkanbun.load(BERT="roberta-classical-chinese-base-char",Danku=False)`. With the option `Danku=True` the pipeline tries to segment sentences automatically. Available `BERT` options are:
+
+* `BERT="roberta-classical-chinese-base-char"` utilizes [roberta-classical-chinese-base-char](https://huggingface.co/KoichiYasuoka/roberta-classical-chinese-base-char) (default)
+* `BERT="roberta-classical-chinese-large-char"` utilizes [roberta-classical-chinese-large-char](https://huggingface.co/KoichiYasuoka/roberta-classical-chinese-large-char)
+* `BERT="guwenbert-base"` utilizes [GuwenBERT-base](https://huggingface.co/ethanyt/guwenbert-base)
+* `BERT="guwenbert-large"` utilizes [GuwenBERT-large](https://huggingface.co/ethanyt/guwenbert-large)
 
 ## Installation for Linux
 
