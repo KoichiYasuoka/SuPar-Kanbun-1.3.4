@@ -165,6 +165,7 @@
 于 于 p,助詞,句頭,* [filler-character]
 于 于 v,前置詞,基盤,* at
 于 于 v,動詞,存在,存在 go-into
+云 云 p,助詞,句頭,* [filler-character]
 云 云 v,動詞,行為,伝達 says-so
 互 互 v,動詞,行為,交流 mutual
 互郷 互郷 n,名詞,固定物,地名 [place-name]
@@ -2486,6 +2487,8 @@
 朱张 朱張 朱张 n,名詞,人,名 [given-name]
 朱張 朱張 朱张 n,名詞,人,名 [given-name]
 朱襄 朱襄 n,名詞,人,姓氏 [surname]
+朴 朴 n,名詞,固定物,樹木 Celtis-sinensis
+朴 朴 v,動詞,描写,態度 uncarved
 朽 朽 v,動詞,変化,性質 rotten
 杇 杇 v,動詞,行為,動作 plaster
 李 李 n,名詞,固定物,樹木 plum
@@ -3325,6 +3328,7 @@
 痛 痛 v,動詞,描写,境遇 sore
 疴 痾 疴 n,名詞,不可譲,疾病 illness
 痾 痾 疴 n,名詞,不可譲,疾病 illness
+瘁 瘁 v,動詞,変化,生物 weary
 瘉 瘉 愈 v,動詞,行為,態度 worry
 瘖 瘖 喑 v,動詞,変化,性質 dumb
 瘠 瘠 n,名詞,人,姓氏 [surname]
