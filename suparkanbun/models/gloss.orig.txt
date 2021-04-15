@@ -2069,6 +2069,7 @@
 扶 扶 v,動詞,行為,動作 support
 承 承 v,動詞,行為,伝達 receive
 技 技 n,名詞,可搬,伝達 skill
+抃 抃 v,動詞,行為,動作 clap-the-hands
 抉 抉 v,動詞,行為,動作 pull-out
 把 把 v,動詞,行為,動作 hold
 抑 抑 v,副詞,判断,逆接 or
@@ -4029,8 +4030,12 @@
 胸 胸 n,名詞,不可譲,身体 chest
 能 能 n,名詞,不可譲,属性 ability
 能 能 v,助動詞,可能,* can
+胁 脅 胁 n,名詞,不可譲,身体 side
+脅 脅 胁 n,名詞,不可譲,身体 side
+脇 脅 胁 n,名詞,不可譲,身体 side
 胁 脅 胁 v,動詞,行為,動作 coerce
 脅 脅 胁 v,動詞,行為,動作 coerce
+脇 脅 胁 v,動詞,行為,動作 coerce
 胫 脛 胫 n,名詞,不可譲,身体 shin
 脛 脛 胫 n,名詞,不可譲,身体 shin
 脩 脩 修 n,名詞,人,名 [given-name]
@@ -5795,7 +5800,11 @@
 鰍 鰍 鳅 n,名詞,主体,動物 loach
 鳅 鰍 鳅 n,名詞,主体,動物 loach
 鰥 鰥 鳏 n,名詞,主体,動物 [large-fish]
+鱞 鰥 鳏 n,名詞,主体,動物 [large-fish]
 鳏 鰥 鳏 n,名詞,主体,動物 [large-fish]
+鰥 鰥 鳏 v,動詞,描写,境遇 wifeless
+鱞 鰥 鳏 v,動詞,描写,境遇 wifeless
+鳏 鰥 鳏 v,動詞,描写,境遇 wifeless
 鰲 鰲 鳌 n,名詞,主体,動物 huge-turtle
 鳌 鰲 鳌 n,名詞,主体,動物 huge-turtle
 鼇 鰲 鳌 n,名詞,主体,動物 huge-turtle
