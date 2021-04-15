@@ -79,7 +79,7 @@ class SuParKanbunTokenizer(object):
         if p=="S" or p=="E":
           t+="\n"
     p=self.tagger(t.replace("\n",""))
-    u=self.supar.predict([[c for c in s] for s in t.strip().split("\n")])
+    u=self.supar.predict([[c for c in s] for s in t.strip().split("\n")],lang=None)
     t=text.replace("\n","")
     i=0
     w=[]
