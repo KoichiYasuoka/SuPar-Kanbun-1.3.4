@@ -16,7 +16,7 @@ setuptools.setup(
   keywords="NLP Chinese",
   packages=setuptools.find_packages(),
   install_requires=[
-    "supar==1.0.1a1",
+    "supar>=1.1.0",
     "transformers>=4.0.1",
     "spacy>=2.2.2",
     "deplacy>=1.9.5"

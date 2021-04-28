@@ -95,10 +95,10 @@ BEGIN{
     i++;
 }' simplified.conllu
 if [ ! -f guwenbert-base.pos/guwenbert-base.supar ]
-then python3 -m supar.cmds.biaffine_dependency train -b -d 0 -p guwenbert-base.pos/guwenbert-base.supar --epochs=1000 -f bert --bert ethanyt/guwenbert-base --train train.conllu --dev dev.conllu --test test.conllu --embed=''
+then python3 -m supar.cmds.biaffine_dep train -b -d 0 -p guwenbert-base.pos/guwenbert-base.supar -c biaffine-dep-en -f bert --bert ethanyt/guwenbert-base --train train.conllu --dev dev.conllu --test test.conllu --embed='' --proj
 fi
 if [ ! -f guwenbert-large.pos/guwenbert-large.supar ]
-then python3 -m supar.cmds.biaffine_dependency train -b -d 0 -p guwenbert-large.pos/guwenbert-large.supar --epochs=1000 -f bert --bert ethanyt/guwenbert-large --train train.conllu --dev dev.conllu --test test.conllu --embed=''
+then python3 -m supar.cmds.biaffine_dep train -b -d 0 -p guwenbert-large.pos/guwenbert-large.supar -c biaffine-dep-en -f bert --bert ethanyt/guwenbert-large --train train.conllu --dev dev.conllu --test test.conllu --embed='' --proj
 fi
 
 python3 -c '
@@ -235,10 +235,10 @@ BEGIN{
     i++;
 }' traditional.conllu
 if [ ! -f roberta-classical-chinese-base-char.pos/roberta-classical-chinese-base-char.supar ]
-then python3 -m supar.cmds.biaffine_dependency train -b -d 0 -p roberta-classical-chinese-base-char.pos/roberta-classical-chinese-base-char.supar --epochs=1000 -f bert --bert KoichiYasuoka/roberta-classical-chinese-base-char --train train.conllu --dev dev.conllu --test test.conllu --embed=''
+then python3 -m supar.cmds.biaffine_dep train -b -d 0 -p roberta-classical-chinese-base-char.pos/roberta-classical-chinese-base-char.supar -c biaffine-dep-en -f bert --bert KoichiYasuoka/roberta-classical-chinese-base-char --train train.conllu --dev dev.conllu --test test.conllu --embed='' --proj
 fi
 if [ ! -f roberta-classical-chinese-large-char.pos/roberta-classical-chinese-large-char.supar ]
-then python3 -m supar.cmds.biaffine_dependency train -b -d 0 -p roberta-classical-chinese-large-char.pos/roberta-classical-chinese-large-char.supar --epochs=1000 -f bert --bert KoichiYasuoka/roberta-classical-chinese-large-char --train train.conllu --dev dev.conllu --test test.conllu --embed=''
+then python3 -m supar.cmds.biaffine_dep train -b -d 0 -p roberta-classical-chinese-large-char.pos/roberta-classical-chinese-large-char.supar -c biaffine-dep-en -f bert --bert KoichiYasuoka/roberta-classical-chinese-large-char --train train.conllu --dev dev.conllu --test test.conllu --embed='' --proj
 fi
 
 python3 -c '
