@@ -1528,8 +1528,10 @@
 昆仑 崑崙 昆仑 n,名詞,固定物,地名 [place-name]
 崔子 崔子 n,名詞,人,複合的人名 Cuizi
 崩 崩 v,動詞,変化,制度 collapse
+崴 崴 v,動詞,描写,形質 lofty
 嵎 嵎 n,名詞,固定物,地形 corner-of-mountain
 嵩 嵩 v,動詞,描写,形質 lofty
+嵬 嵬 v,動詞,描写,形質 lofty
 嶰 嶰 n,名詞,固定物,地形 valley
 岭 嶺 岭 n,名詞,固定物,地形 mountain-range
 嶺 嶺 岭 n,名詞,固定物,地形 mountain-range
@@ -4948,6 +4950,8 @@
 𫐄 軏 𫐄 n,名詞,可搬,道具 cross-bar-at-end-of-carriage-pole
 軔 軔 轫 n,名詞,度量衡,* [length-unit]
 轫 軔 轫 n,名詞,度量衡,* [length-unit]
+軫 軫 轸 n,名詞,可搬,道具 cross-bar-at-the-rear-of-a-carriage
+轸 軫 轸 n,名詞,可搬,道具 cross-bar-at-the-rear-of-a-carriage
 軻 軻 轲 n,名詞,人,名 [given-name]
 轲 軻 轲 n,名詞,人,名 [given-name]
 較 較 较 v,動詞,行為,動作 compare
