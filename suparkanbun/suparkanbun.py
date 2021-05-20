@@ -72,13 +72,35 @@ class SuParKanbunTokenizer(object):
       else:
         t+=c
     if self.danku!=None:
-      s=self.danku(t.replace("\n",""))
+      u=t.replace("\n","")
       t=""
+      while len(u)>500:
+        s=self.danku(u[0:500])
+        r=""
+        for c,p in s:
+          r+=c
+          if p=="S" or p=="E":
+            r+="\n"
+        r="\n".join(r.split("\n")[0:-2])+"\n"
+        t+=r
+        u=u[len(r.replace("\n","")):]
+      s=self.danku(u)
       for c,p in s:
         t+=c
         if p=="S" or p=="E":
           t+="\n"
-    p=self.tagger(t.replace("\n",""))
+    if len(t)<500:
+      p=self.tagger(t.replace("\n",""))
+    else:
+      p=[]
+      u=""
+      for s in t.strip().split("\n"):
+        u+=s
+        if len(u)>400:
+          p+=self.tagger(u)
+          u=""
+      if len(u)>0:
+        p+=self.tagger(u)
     u=self.supar.predict([[c for c in s] for s in t.strip().split("\n")],lang=None)
     t=text.replace("\n","")
     i=0
