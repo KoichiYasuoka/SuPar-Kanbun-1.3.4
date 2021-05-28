@@ -41,8 +41,8 @@ Tokenizer, POS-Tagger and Dependency-Parser for Classical Chinese Texts (漢文/
 * `BERT="roberta-classical-chinese-large-char"` utilizes [roberta-classical-chinese-large-char](https://huggingface.co/KoichiYasuoka/roberta-classical-chinese-large-char)
 * `BERT="guwenbert-base"` utilizes [GuwenBERT-base](https://huggingface.co/ethanyt/guwenbert-base)
 * `BERT="guwenbert-large"` utilizes [GuwenBERT-large](https://huggingface.co/ethanyt/guwenbert-large)
-* `BERT="sikubert"` utilizes [SikuBERT](https://huggingface.co/SIKU-BERT/sikubert)
 * `BERT="sikuroberta"` utilizes [SikuRoBERTa](https://huggingface.co/SIKU-BERT/sikuroberta)
+* `BERT="sikubert"` utilizes [SikuBERT](https://huggingface.co/SIKU-BERT/sikubert)
 
 ## Installation for Linux
 
