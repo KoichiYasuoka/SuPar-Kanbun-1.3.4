@@ -65,7 +65,7 @@ while True:
     print("{\"tokens\":[\""+"\",\"".join(tokens)+"\"],\"tags\":[\""+"\",\"".join(tags)+"\"]}")
     tokens=[]
     tags=[]
-' | nawk '
+' | tee simplifiedPOS.json | nawk '
 {
   if(NR%10>0)
     printf("%s\n",$0)>"trainPOS.json";
@@ -131,7 +131,7 @@ while True:
       print("{\"tokens\":[\""+"\",\"".join(tokens)+"\"],\"tags\":[\""+"\",\"".join(tags)+"\"]}")
       tokens=[]
       tags=[]
-' < simplified.conllu | nawk '
+' < simplified.conllu | tee simplifiedDanku.json | nawk '
 {
   if(NR%10>0)
     printf("%s\n",$0)>"trainDanku.json";
@@ -206,7 +206,7 @@ while True:
     print("{\"tokens\":[\""+"\",\"".join(tokens)+"\"],\"tags\":[\""+"\",\"".join(tags)+"\"]}")
     tokens=[]
     tags=[]
-' | nawk '
+' | tee traditionalPOS.json | nawk '
 {
   if(NR%10>0)
     printf("%s\n",$0)>>"trainPOS.json";
@@ -271,7 +271,7 @@ while True:
       print("{\"tokens\":[\""+"\",\"".join(tokens)+"\"],\"tags\":[\""+"\",\"".join(tags)+"\"]}")
       tokens=[]
       tags=[]
-' < traditional.conllu | nawk '
+' < traditional.conllu | tee traditionalDanku.json | nawk '
 {
   if(NR%10>0)
     printf("%s\n",$0)>>"trainDanku.json";
@@ -285,6 +285,57 @@ fi
 if [ ! -d roberta-classical-chinese-large-char.danku ]
 then mkdir -p roberta-classical-chinese-large-char.danku
      python3 run_ner.py --model_name_or_path KoichiYasuoka/roberta-classical-chinese-large-char --train_file trainDanku.json --validation_file validDanku.json --output_dir roberta-classical-chinese-large-char.danku --do_train --do_eval
+fi
+
+nawk '
+{
+  if(NR%10>0)
+    printf("%s\n",$0)>"trainPOS.json";
+  else
+    printf("%s\n",$0)>"validPOS.json";
+}' traditionalPOS.json
+if [ ! -d sikubert.pos ]
+then mkdir -p sikubert.pos
+     python3 run_ner.py --model_name_or_path SIKU-BERT/sikubert --train_file trainPOS.json --validation_file validPOS.json --output_dir sikubert.pos --do_train --do_eval
+fi
+if [ ! -d sikuroberta.pos ]
+then mkdir -p sikuroberta.pos
+     python3 run_ner.py --model_name_or_path SIKU-BERT/sikuroberta --train_file trainPOS.json --validation_file validPOS.json --output_dir sikuroberta.pos --do_train --do_eval
+fi
+
+nawk '
+BEGIN{
+  f[0]="test.conllu";
+  f[1]="dev.conllu";
+  for(i=2;i<10;i++)
+    f[i]="train.conllu";
+}
+{
+  printf("%s\n",$0)>f[i%10];
+  if($0=="")
+    i++;
+}' traditional.conllu
+if [ ! -f sikubert.pos/sikubert.supar ]
+then python3 -m supar.cmds.biaffine_dep train -b -d 0 -p sikubert.pos/sikubert.supar -c biaffine-dep-en -f bert --bert SIKU-BERT/sikubert --train train.conllu --dev dev.conllu --test test.conllu --embed='' --proj
+fi
+if [ ! -f sikuroberta.pos/sikuroberta.supar ]
+then python3 -m supar.cmds.biaffine_dep train -b -d 0 -p sikuroberta.pos/sikuroberta.supar -c biaffine-dep-en -f bert --bert SIKU-BERT/sikuroberta --train train.conllu --dev dev.conllu --test test.conllu --embed='' --proj
+fi
+
+nawk '
+{
+  if(NR%10>0)
+    printf("%s\n",$0)>"trainDanku.json";
+  else
+    printf("%s\n",$0)>"validDanku.json";
+}' traditionalDanku.json
+if [ ! -d sikubert.danku ]
+then mkdir -p sikubert.danku
+     python3 run_ner.py --model_name_or_path SIKU-BERT/sikubert --train_file trainDanku.json --validation_file validDanku.json --output_dir sikubert.danku --do_train --do_eval
+fi
+if [ ! -d sikuroberta.danku ]
+then mkdir -p sikuroberta.danku
+     python3 run_ner.py --model_name_or_path SIKU-BERT/sikuroberta --train_file trainDanku.json --validation_file validDanku.json --output_dir sikuroberta.danku --do_train --do_eval
 fi
 
 exit 0
