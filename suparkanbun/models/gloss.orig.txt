@@ -184,6 +184,7 @@
 五百 五百 n,数詞,数,* five-hundred
 五百二十 五百二十 n,数詞,数,* five-hundred-and-twenty
 井 井 n,名詞,固定物,建造物 well
+些 些 p,助詞,句末,* [final-particle]
 些 些 v,動詞,描写,量 a-few
 亚 亞 亚 n,数詞,数,* second
 亜 亞 亚 n,数詞,数,* second
