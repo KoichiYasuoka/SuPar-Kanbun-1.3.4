@@ -279,6 +279,8 @@
 余 余 n,代名詞,人称,他 [1PRON]
 佚 佚 v,動詞,描写,態度 feel-at-ease
 佚 佚 v,動詞,行為,得失 escape
+仏 佛 n,名詞,主体,神仏 Buddha
+佛 佛 n,名詞,主体,神仏 Buddha
 仏 佛 v,動詞,行為,動作 resist
 佛 佛 v,動詞,行為,動作 resist
 仏肸 佛肸 n,名詞,人,名 [given-name]
@@ -2380,6 +2382,7 @@
 寔 是 n,代名詞,指示,* this
 是 是 n,代名詞,指示,* this
 是 是 n,名詞,描写,態度 right
+是 是 v,動詞,存在,存在 be
 昴 昴 n,名詞,天象,天文 Pleiades
 时 時 时 n,代名詞,指示,* this
 時 時 时 n,代名詞,指示,* this
@@ -4696,6 +4699,9 @@
 识 識 识 v,動詞,行為,動作 recognize
 警 警 v,動詞,行為,交流 warn
 譬 譬 v,動詞,行為,動作 give-an-analogy
+訳 譯 译 v,動詞,行為,動作 translate
+譯 譯 译 v,動詞,行為,動作 translate
+译 譯 译 v,動詞,行為,動作 translate
 議 議 议 v,動詞,行為,交流 discuss
 议 議 议 v,動詞,行為,交流 discuss
 护 護 护 v,動詞,行為,動作 protect
