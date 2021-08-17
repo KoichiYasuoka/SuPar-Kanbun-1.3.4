@@ -5353,6 +5353,10 @@
 关雎 關雎 关雎 n,名詞,主体,書物 [poetry-name]
 関雎 關雎 关雎 n,名詞,主体,書物 [poetry-name]
 關雎 關雎 关雎 n,名詞,主体,書物 [poetry-name]
+闡 闡 阐 n,名詞,人,名 [given-name]
+阐 闡 阐 n,名詞,人,名 [given-name]
+闡 闡 阐 v,動詞,行為,動作 open
+阐 闡 阐 v,動詞,行為,動作 open
 闢 闢 辟 v,動詞,行為,設置 open-up
 阜 阜 n,名詞,固定物,地形 mound
 阨 阨 厄 v,動詞,描写,境遇 impassable
@@ -5660,6 +5664,7 @@
 餔 餔 𫗦 v,動詞,行為,飲食 feed
 𫗦 餔 𫗦 v,動詞,行為,飲食 feed
 餘 餘 余 n,名詞,数量,* surplus
+馀 餘 余 n,名詞,数量,* surplus
 館 館 馆 n,名詞,固定物,建造物 guest-house
 馆 館 馆 n,名詞,固定物,建造物 guest-house
 館 館 馆 n,名詞,固定物,建造物 guest-house
