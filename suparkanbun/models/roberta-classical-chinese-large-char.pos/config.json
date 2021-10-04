@@ -281,7 +281,11 @@
   "num_attention_heads": 16,
   "num_hidden_layers": 24,
   "pad_token_id": 1,
+  "position_embedding_type": "absolute",
   "tokenizer_class": "BertTokenizer",
+  "torch_dtype": "float32",
+  "transformers_version": "4.9.2",
   "type_vocab_size": 1,
+  "use_cache": true,
   "vocab_size": 26318
 }
