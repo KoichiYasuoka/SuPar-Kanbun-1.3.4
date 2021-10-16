@@ -5057,7 +5057,7 @@
 逢蒙 逢蒙 n,名詞,人,名 [given-name]
 连 連 连 v,動詞,行為,動作 link-up
 連 連 连 v,動詞,行為,動作 link-up
-逮 逮 v,動詞,行為,動作 while
+逮 逮 v,動詞,行為,動作 reach-to
 进 進 进 v,動詞,行為,移動 advance
 進 進 进 v,動詞,行為,移動 advance
 逼 逼 v,動詞,行為,動作 encroach-on
