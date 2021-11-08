@@ -2594,6 +2594,8 @@
 械 械 n,名詞,可搬,道具 tool
 梲 梲 棁 n,名詞,固定物,建造物 short-pillars-supporting-rafters-of-a-house
 棁 梲 棁 n,名詞,固定物,建造物 short-pillars-supporting-rafters-of-a-house
+梵 梵 n,名詞,人,その他の人名 Brahma
+梵 梵 n,名詞,描写,形質 Buddhistic
 弃 棄 弃 v,動詞,行為,動作 abandon
 棄 棄 弃 v,動詞,行為,動作 abandon
 枨 棖 枨 n,名詞,人,名 [given-name]
