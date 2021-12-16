@@ -51,10 +51,8 @@ class SuParKanbunTokenizer(object):
     if bert.startswith("guwenbert"):
       from suparkanbun.simplify import simplify
       self.simplify=simplify
-    with open(os.path.join(DOWNLOAD_DIR,"labelPOS.txt"),"r",encoding="utf-8") as f:
-      r=f.read()
     d=os.path.join(DOWNLOAD_DIR,bert+".pos")
-    self.tagger=AutoModelTagger(d,r.strip().split("\n"))
+    self.tagger=AutoModelTagger(d)
     f=os.path.join(d,bert+".supar")
     self.supar=Parser.load(f)
     if danku:
@@ -167,13 +165,13 @@ class SuParKanbunTokenizer(object):
     return doc
 
 class AutoModelTagger(object):
-  def __init__(self,dir,label):
+  def __init__(self,dir,label=None):
     from suparkanbun.download import checkdownload
     from transformers import AutoModelForTokenClassification,AutoTokenizer
     checkdownload(MODEL_URL+os.path.basename(dir)+"/",dir)
     self.model=AutoModelForTokenClassification.from_pretrained(dir)
     self.tokenizer=AutoTokenizer.from_pretrained(dir)
-    self.label=label
+    self.label=label if label else self.model.config.id2label
   def __call__(self,text):
     import torch
     input=self.tokenizer.encode(text,return_tensors="pt")
